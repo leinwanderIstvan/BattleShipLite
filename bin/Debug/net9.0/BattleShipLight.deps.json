@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "BattleShipLight/1.0.0": {
+        "dependencies": {
+          "BattleShipLiteLibrary": "1.0.0"
+        },
+        "runtime": {
+          "BattleShipLight.dll": {}
+        }
+      },
+      "BattleShipLiteLibrary/1.0.0": {
+        "runtime": {
+          "BattleShipLiteLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BattleShipLight/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BattleShipLiteLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

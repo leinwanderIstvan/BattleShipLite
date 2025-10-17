@@ -1,0 +1,4 @@
+﻿
+using BattleShipLight;
+
+Display.DisplayWelcomeScreen();
