@@ -1,0 +1,12 @@
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\bin\Debug\net9.0\BattleShipLiteLibrary.deps.json
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\bin\Debug\net9.0\BattleShipLiteLibrary.dll
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\bin\Debug\net9.0\BattleShipLiteLibrary.pdb
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\obj\Debug\net9.0\BattleShipLiteLibrary.GeneratedMSBuildEditorConfig.editorconfig
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\obj\Debug\net9.0\BattleShipLiteLibrary.AssemblyInfoInputs.cache
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\obj\Debug\net9.0\BattleShipLiteLibrary.AssemblyInfo.cs
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\obj\Debug\net9.0\BattleShipLiteLibrary.csproj.CoreCompileInputs.cache
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\obj\Debug\net9.0\BattleShipLiteLibrary.dll
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\obj\Debug\net9.0\refint\BattleShipLiteLibrary.dll
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\obj\Debug\net9.0\BattleShipLiteLibrary.pdb
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\obj\Debug\net9.0\ref\BattleShipLiteLibrary.dll
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLiteLibrary\obj\Debug\net9.0\BattleShipLiteLibrary.sourcelink.json
