@@ -42,4 +42,9 @@ public static class GameLogic
     {
         throw new NotImplementedException();
     }
+
+    public static bool PlayerStillActive(PlayerInfo opponent)
+    {
+        throw new NotImplementedException();
+    }
 }
