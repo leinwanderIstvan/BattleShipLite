@@ -10,10 +10,82 @@ public static class Display
         WelcomeMessage();
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
-        PlayerInfo player1 = CreatePlayer("Player 1");
-        PlayerInfo player2 = CreatePlayer("Player 2");
+        PlayerInfo activePlayer = CreatePlayer("Player 1");
+        PlayerInfo opponent= CreatePlayer("Player 2");
+
+        PlayerInfo winner = null;
+
+        do
+        {
+            //Display the grids for player 1
+            DisplayShotGrid(activePlayer);
+            //Ask player 1 for their shot
+            //Determine if its a valid shot
+            //Record the shot
+            RecordPlayerShot(activePlayer, opponent);
+            //Check for win condition
+            bool doesGameContinue = GameLogic.PlayerStillActive(opponent);
+            // If game is over set player one as winner
+            // Else go to player 2
+            //Clear the screen
+
+
+        } while (winner == null);
+
         Console.Clear();
 
+
+
+
+
+    }
+
+    private static void RecordPlayerShot(PlayerInfo activePlayer, PlayerInfo opponent)
+    {
+        //Ask for the shot
+        // Determan what row and colum that is  - split it a part 
+        // Determan if its a hit or miss
+        // Go back to begging if its not valid shot 
+        // Determin shot results 
+        // Record results on shot grid
+        
+    }
+
+    private static void DisplayShotGrid(PlayerInfo activePlayer)
+    {
+
+        var currentRow = activePlayer.ShotGrid[0].SpotLetter;
+
+        foreach (var gridSpot in activePlayer.ShotGrid)
+        {
+
+            if (gridSpot.SpotLetter != currentRow)
+            {
+                Console.WriteLine();
+            }
+
+            currentRow = gridSpot.SpotLetter;
+
+            if (gridSpot.Status == GridSpotStatus.Empty)
+            {
+                Console.WriteLine($"{gridSpot.SpotLetter} - {gridSpot.SpotNumber}");
+            }
+            else if (gridSpot.Status == GridSpotStatus.Miss)
+            {
+                Console.Write(" M ");
+            }
+            else if (gridSpot.Status == GridSpotStatus.Hit)
+            {
+                Console.Write(" H ");
+            }
+            else
+            {
+                Console.WriteLine("?");
+            }
+
+
+        }
+         
     }
 
     private static void WelcomeMessage()
