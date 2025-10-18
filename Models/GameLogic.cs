@@ -47,4 +47,14 @@ public static class GameLogic
     {
         throw new NotImplementedException();
     }
+
+    public static int GetShotCount(PlayerInfo winner)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static (string row, int column) SplitShotIntoRowAndColumn(string shot)
+    {
+        throw new NotImplementedException();
+    }
 }
