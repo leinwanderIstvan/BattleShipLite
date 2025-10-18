@@ -26,11 +26,29 @@ public static class Display
             //Check for win condition
             bool doesGameContinue = GameLogic.PlayerStillActive(opponent);
             // If game is over set player one as winner
+            if (doesGameContinue == true)
+            {
+                // Switch players
+                //var temp = activePlayer;
+                //activePlayer = opponent;
+                //opponent = temp;
+
+                // Use tuple
+                (activePlayer, opponent) = (opponent, activePlayer);
+
+            }
+            else
+            {
+                winner = activePlayer;
+            }
+
             // Else go to player 2
             //Clear the screen
 
 
         } while (winner == null);
+
+        IdentifyWinner(winner);
 
         Console.Clear();
 
@@ -38,6 +56,12 @@ public static class Display
 
 
 
+    }
+
+    private static void IdentifyWinner(PlayerInfo winner)
+    {
+       Console.WriteLine($"Congratulations for winning:  {winner.PlayerName}");
+       Console.WriteLine($"{winner.PlayerName} took {GameLogic.GetShotCount(winner)}");
     }
 
     private static void RecordPlayerShot(PlayerInfo activePlayer, PlayerInfo opponent)
