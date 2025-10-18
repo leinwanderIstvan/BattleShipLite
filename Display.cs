@@ -1,4 +1,5 @@
-﻿using BattleShipLiteLibrary.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using BattleShipLiteLibrary.Models;
 
 namespace BattleShipLight;
 
@@ -66,13 +67,30 @@ public static class Display
 
     private static void RecordPlayerShot(PlayerInfo activePlayer, PlayerInfo opponent)
     {
+
+        bool isvalidShot = false;
+
+        do
+        {
+           string shot =  AskForShot();
+           (string row, int column) = GameLogic.SplitShotIntoRowAndColumn(shot);
+
+        } while (isvalidShot == false );
+
         //Ask for the shot
         // Determan what row and colum that is  - split it a part 
         // Determan if its a hit or miss
         // Go back to begging if its not valid shot 
         // Determin shot results 
         // Record results on shot grid
-        
+
+    }
+
+    private static string AskForShot()
+    {
+        Console.WriteLine("Please enter your shot: ");
+        string? output = Console.ReadLine();
+        return output;
     }
 
     private static void DisplayShotGrid(PlayerInfo activePlayer)

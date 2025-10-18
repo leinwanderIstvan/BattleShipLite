@@ -1,0 +1,6 @@
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLite\obj\Debug\net9.0\BattleShipLite.csproj.AssemblyReference.cache
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLite\obj\Debug\net9.0\BattleShipLite.GeneratedMSBuildEditorConfig.editorconfig
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLite\obj\Debug\net9.0\BattleShipLite.AssemblyInfoInputs.cache
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLite\obj\Debug\net9.0\BattleShipLite.AssemblyInfo.cs
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLite\obj\Debug\net9.0\BattleShipLite.csproj.CoreCompileInputs.cache
+E:\source_v3\C#\PracticeProjectApp\BattleshipApp\BattleshipLiteApp\BattleShipLite\obj\Debug\net9.0\BattleShipLite.sourcelink.json
