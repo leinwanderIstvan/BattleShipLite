@@ -57,4 +57,19 @@ public static class GameLogic
     {
         throw new NotImplementedException();
     }
+
+    public static bool ValidateShot(PlayerInfo activePlayer, string row, int column)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static bool IdentifyShotResult(PlayerInfo opponent, string row, int column)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static void MarkShotResult(PlayerInfo activePlayer, string row, int column, bool isAHit)
+    {
+        throw new NotImplementedException();
+    }
 }
