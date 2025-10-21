@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BattleShipLiteLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ba24f5b72b0f62fab17046592cd4cc7c21d9bfe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5cc830df88a36ac4c5a4fa91aed6ef85b84ea98")]
 [assembly: System.Reflection.AssemblyProductAttribute("BattleShipLiteLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BattleShipLiteLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -40,36 +40,148 @@ public static class GameLogic
 
     public static bool PlaceShip(PlayerInfo model, string? location)
     {
-        throw new NotImplementedException();
+        var output = false;
+
+        var (row, colum) = SplitShotIntoRowAndColumn(location ?? "");
+
+        bool isValidPlacement = ValidateGridLocation(row, colum);
+
+        bool isSpotOpen = ValidateShipLocation(model, row, colum);
+
+
+        if (isValidPlacement && isSpotOpen)
+        {
+            model.ShipGrid.Add(new GridSpotModel()
+            {
+                SpotLetter = row.ToUpper(),
+                SpotNumber = colum,
+                Status = GridSpotStatus.Ship
+            }); 
+
+            output = true;
+        }
+
+        return output;
+
+
     }
 
-    public static bool PlayerStillActive(PlayerInfo opponent)
+    private static bool ValidateShipLocation(PlayerInfo model, string row, int colum)
     {
-        throw new NotImplementedException();
+        bool isValidLocation = true;
+        foreach (var ship in model.ShipGrid)
+        {
+            if (ship.SpotLetter == row.ToUpper() && ship.SpotNumber == colum)
+            {
+                isValidLocation = false;
+            }
+        }
+
+        return isValidLocation;
     }
 
-    public static int GetShotCount(PlayerInfo winner)
+    private static bool ValidateGridLocation(PlayerInfo model, string row, int colum)
     {
-        throw new NotImplementedException();
+        bool isValidLocation = false;
+        foreach (var spot in model.ShotGrid)
+        {
+            if (spot.SpotLetter == row.ToUpper() && spot.SpotNumber == colum)
+            {
+                isValidLocation = true;
+            }
+        }
+        return isValidLocation;
+
+    }
+
+    public static bool PlayerStillActive(PlayerInfo player)
+    {
+        bool isACtive = false;
+
+        foreach (var ship in player.ShipGrid)
+        {
+            if (ship.Status != GridSpotStatus.Sunk)
+            {
+                isACtive = true;
+
+            }
+
+        }
+
+        return isACtive;
+    }
+
+    public static int GetShotCount(PlayerInfo player)
+    {
+        int shotCount = 0;
+        foreach (var shot in player.ShotGrid)
+        {
+            
+            if (shot.Status is GridSpotStatus.Hit or GridSpotStatus.Miss)
+            {
+                shotCount++;
+            }
+        }
+
+        return shotCount;
+
     }
 
     public static (string row, int column) SplitShotIntoRowAndColumn(string shot)
     {
-        throw new NotImplementedException();
+        
+        if (shot.Length != 2)
+        {
+            throw new ArgumentException("Invalid shot format", shot);
+        }
+
+
+        string row = shot.Substring(0, 1).ToUpper();
+        var column = int.Parse(shot.Substring(1, 1));
+        return (row, column);
+
     }
 
     public static bool ValidateShot(PlayerInfo activePlayer, string row, int column)
     {
-        throw new NotImplementedException();
+        bool isValidShot = false;
+
+        foreach (var spot in activePlayer.ShotGrid)
+        {
+            if (spot.SpotLetter != row.ToUpper() || spot.SpotNumber != column) continue;
+            if (spot.Status == GridSpotStatus.Empty)
+            {
+                isValidShot = true;
+            }
+
+        }
+
+        return isValidShot;
+
     }
 
     public static bool IdentifyShotResult(PlayerInfo opponent, string row, int column)
     {
-        throw new NotImplementedException();
+        bool isAHit = false;
+        foreach (var ship in opponent.ShipGrid)
+        {
+            if (ship.SpotLetter == row.ToUpper() && ship.SpotNumber == column)
+            {
+                isAHit = true;
+            }
+        }
+        return isAHit;
+
     }
 
     public static void MarkShotResult(PlayerInfo activePlayer, string row, int column, bool isAHit)
     {
-        throw new NotImplementedException();
+        foreach (var spot in activePlayer.ShotGrid)
+        {
+            if (spot.SpotLetter == row.ToUpper() && spot.SpotNumber == column)
+            {
+                spot.Status = isAHit ? GridSpotStatus.Hit : GridSpotStatus.Miss;
+            }
+        }
     }
 }
